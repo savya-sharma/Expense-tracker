@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { ExpensesContext } from './App'
-import { Scene } from 'three'
 
 const Expenses = () => {
   const [amount, setAmount] = useState("")
