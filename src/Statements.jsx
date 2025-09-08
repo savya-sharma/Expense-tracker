@@ -7,7 +7,7 @@ const Statements = () => {
   const { expenses } = useContext(ExpensesContext)
 
   return (
-    <div className='w-full min-h-screen flex justify-center items-start pt-8'>
+    <div className='w-full min-h-screen flex justify-center items-start pt-8 relative z-10'>
       <div className='w-[80vw] bg-white bg-opacity-70 shadow-md p-6'>
 
         <h2 className='text-3xl text-center mb-6'>View All Expenses</h2>

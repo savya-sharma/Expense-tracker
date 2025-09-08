@@ -12,7 +12,7 @@ const Expenses = () => {
   const { expenses, setExpenses } = useContext(ExpensesContext)
 
   const addExpense = () => {
-    if (!amount || (!detail && !select)) {
+    if (!amount || !detail || !select) {
       alert("Please enter amount and either detail or select a category");
       return;
     }
@@ -25,6 +25,11 @@ const Expenses = () => {
       detail,
       select
     }
+    //JavaScript
+    //tpircSavaJ
+    //TPIRCSAV
+
+
 
     // Step 6: Add to expenses array
     setExpenses([...expenses, newExpense])
@@ -93,6 +98,7 @@ const Expenses = () => {
                   <th className="px-4 py-2 border border-gray-400">S.No</th>
                   <th className="px-4 py-2 border border-gray-400">Date</th>
                   <th className="px-4 py-2 border border-gray-400">Detail</th>
+                  <th className="px-4 py-2 border border-gray-400">Category</th>
                   <th className="px-4 py-2 border border-gray-400">Amount</th>
                 </tr>
               </thead>
@@ -101,7 +107,8 @@ const Expenses = () => {
                   <tr key={exp} className="text-center">
                     <td className="px-4 py-2 border border-gray-400">{exp.sNo}</td>
                     <td className="px-4 py-2 border border-gray-400">{exp.date}</td>
-                    <td className="px-4 py-2 border border-gray-400">{exp.detail} {exp.select}</td>
+                    <td className="px-4 py-2 border border-gray-400">{exp.detail} </td>
+                    <td className="px-4 py-2 border border-gray-400">{exp.select} </td>
                     <td className="px-4 py-2 border border-gray-400">{exp.amount}</td>
                   </tr>
                 ))}
